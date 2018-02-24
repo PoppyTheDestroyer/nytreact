@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 import ReactDOM from "react-dom";
 import _ from "lodash";
-import SearchBar from "./components/search_bar";
+import SearchBar from "./search_bar";
 
 const API = "24ad0c2914ee4ca7983d996ef1128800";
 let url = `https://api.nytimes.com/svc/search/v2/articlesearch.json?q=${term}&api-key=${API}`

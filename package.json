@@ -6,15 +6,32 @@
     "axios": "^0.18.0",
     "body-parser": "^1.18.2",
     "express": "^4.16.2",
+    "lodash": "^4.17.5",
     "mongoose": "^5.0.6",
     "react": "^16.2.0",
     "react-dom": "^16.2.0",
     "react-scripts": "1.1.1"
   },
   "scripts": {
-    "start": "react-scripts start",
-    "build": "react-scripts build",
+    "server": "node server.js",
+    "client": "node scripts/start-client.js",
+    "start": "concurrently \"nodemon server.js\" \"npm run client\"",
+    "build": "node scripts/build.js",
     "test": "react-scripts test --env=jsdom",
-    "eject": "react-scripts eject"
-  }
+    "eject": "react-scripts eject",
+    "installDeps": "yarn && cd client && yarn"
+  },
+  "description": "This project was bootstrapped with [Create React App](https://github.com/facebookincubator/create-react-app).",
+  "main": "server.js",
+  "devDependencies": {},
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jmsaenz5/nytreact.git"
+  },
+  "author": "JMS",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/jmsaenz5/nytreact/issues"
+  },
+  "homepage": "https://github.com/jmsaenz5/nytreact#readme"
 }
